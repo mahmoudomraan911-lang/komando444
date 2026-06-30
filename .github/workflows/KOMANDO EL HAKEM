@@ -1,0 +1,517 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the "main" branch
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v4
+
+      # Runs a single command using the runners shell
+      - name: Run a one-line script
+        run: echo Hello, world!
+
+      # Runs a set of commands using the runners shell
+      - name: Run a multi-line script
+        run: |
+          echo Add other actions to build,<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KOMANDO EL HAKEM HUB</title>
+    <style>
+        :root {
+            --bg-color: #040508;
+            --card-bg: rgba(6, 9, 15, 0.85);
+            --neon-blue: #45f3ff;
+            --neon-red: #ff0055;
+            --neon-green: #39ff14;
+            --neon-purple: #9d4edd;
+            --text-color: #e0e6ed;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            background-image: linear-gradient(to bottom, rgba(4, 5, 8, 0.8), rgba(4, 5, 8, 0.9)), url('Gemini_Generated_Image_eteygreteygretey.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: var(--text-color);
+            direction: rtl;
+            padding: 40px;
+        }
+
+        .desktop-container {
+            max-width: 1650px;
+            margin: 0 auto;
+        }
+
+        header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            padding: 25px 30px;
+            background: rgba(6, 9, 14, 0.9);
+            border-bottom: 2px solid var(--neon-blue);
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.5);
+        }
+
+        .logo {
+            font-size: 32px;
+            font-weight: 900;
+            color: #fff;
+            letter-spacing: 2px;
+            text-shadow: 0 0 15px var(--neon-blue);
+        }
+
+        .github-top-btn {
+            display: inline-block;
+            color: var(--neon-green);
+            border: 1px solid var(--neon-green);
+            padding: 12px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+            transition: all 0.3s;
+            box-shadow: 0 0 10px rgba(57, 255, 20, 0.2);
+        }
+
+        .github-top-btn:hover {
+            background: var(--neon-green);
+            color: #000;
+            box-shadow: 0 0 20px var(--neon-green);
+        }
+
+        .section-title {
+            color: #fff;
+            margin: 40px 0 20px 0;
+            border-right: 5px solid var(--neon-red);
+            padding-right: 15px;
+            font-size: 24px;
+            text-shadow: 0 0 10px rgba(255, 0, 85, 0.4);
+        }
+
+        .desktop-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid rgba(69, 243, 255, 0.1);
+            border-radius: 14px;
+            padding: 22px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            border-color: var(--neon-blue);
+            box-shadow: 0 0 20px rgba(69, 243, 255, 0.2);
+            transform: translateY(-5px);
+        }
+
+        .card.high-alert { border-right: 5px solid var(--neon-red); }
+        .card.high-alert:hover { border-color: var(--neon-red); }
+
+        .card h3 {
+            color: #fff;
+            margin-bottom: 12px;
+            font-size: 18px;
+        }
+
+        .card p {
+            font-size: 13px;
+            line-height: 1.6;
+            color: #b2becb;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            background: transparent;
+            color: var(--neon-blue);
+            border: 1px solid var(--neon-blue);
+            padding: 10px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            transition: all 0.3s;
+            font-size: 13px;
+        }
+
+        .btn:hover {
+            background: var(--neon-blue);
+            color: #000;
+            box-shadow: 0 0 15px var(--neon-blue);
+        }
+
+        .btn-alert { color: var(--neon-red); border-color: var(--neon-red); }
+        .btn-alert:hover { background: var(--neon-red); color: #fff; box-shadow: 0 0 15px var(--neon-red); }
+
+        /* 🛠️ تصميم اللوحة المنبثقة (Modal) 🛠️ */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.85);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: all 0.4s ease;
+            z-index: 1000;
+        }
+
+        .modal-overlay.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .modal-box {
+            background: #090d16;
+            border: 2px solid var(--neon-blue);
+            box-shadow: 0 0 30px rgba(69, 243, 255, 0.3);
+            border-radius: 16px;
+            width: 90%;
+            max-width: 650px;
+            padding: 30px;
+            transform: scale(0.7);
+            transition: all 0.4s ease;
+            text-align: right;
+        }
+
+        .modal-overlay.active .modal-box {
+            transform: scale(1);
+        }
+
+        .modal-title {
+            font-size: 22px;
+            color: #fff;
+            margin-bottom: 15px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding-bottom: 10px;
+            text-shadow: 0 0 10px var(--neon-blue);
+        }
+
+        .modal-desc {
+            font-size: 15px;
+            color: #b2becb;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .modal-code {
+            background: #020306;
+            border: 1px solid rgba(255,255,255,0.05);
+            border-radius: 8px;
+            padding: 15px;
+            direction: ltr;
+            text-align: left;
+            font-family: 'Courier New', Courier, monospace;
+            color: var(--neon-green);
+            white-space: pre-wrap;
+            margin-bottom: 25px;
+            font-size: 14px;
+            box-shadow: inset 0 0 10px rgba(0,0,0,0.8);
+        }
+
+        .close-modal-btn {
+            background: var(--neon-red);
+            color: #fff;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+
+        .close-modal-btn:hover {
+            box-shadow: 0 0 15px var(--neon-red);
+            transform: translateY(-2px);
+        }
+
+        /* قنوات التواصل */
+        .contact-section-container {
+            margin-top: 60px;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .contact-standalone-card {
+            background: var(--card-bg);
+            border: 1px solid var(--neon-purple);
+            border-radius: 16px;
+            padding: 30px;
+            width: 100%;
+            max-width: 800px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(157, 78, 221, 0.15);
+        }
+
+        .contact-standalone-card h3 {
+            color: #fff;
+            font-size: 22px;
+            margin-bottom: 10px;
+            text-shadow: 0 0 10px rgba(157, 78, 221, 0.5);
+        }
+
+        .contact-standalone-card p {
+            font-size: 14px;
+            color: #b2becb;
+            margin-bottom: 25px;
+        }
+
+        .contact-row {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .contact-btn {
+            flex: 1;
+            max-width: 200px;
+            padding: 14px;
+            text-align: center;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s;
+            font-size: 14px;
+        }
+
+        .btn-tiktok { color: #ff0055; border: 1px solid #ff0055; }
+        .btn-tiktok:hover { background: #ff0055; color: #fff; box-shadow: 0 0 15px #ff0055; }
+        
+        .btn-telegram { color: #0088cc; border: 1px solid #0088cc; }
+        .btn-telegram:hover { background: #0088cc; color: #fff; box-shadow: 0 0 15px #0088cc; }
+
+        .btn-whatsapp { color: #25d366; border: 1px solid #25d366; }
+        .btn-whatsapp:hover { background: #25d366; color: #fff; box-shadow: 0 0 15px #25d366; }
+    </style>
+</head>
+<body>
+
+    <div class="desktop-container">
+        <header>
+            <div class="logo">KOMANDO EL HAKEM HACKER HUB</div>
+            <a href="https://desktop.github.com/" target="_blank" class="github-top-btn">تحميل برنامج GitHub Desktop للكمبيوتر 📥</a>
+        </header>
+
+        <h2 class="section-title">قسم أدوات وبرامج Python و GitHub المخصصة</h2>
+        <div class="desktop-grid">
+            <div class="card high-alert">
+                <h3>Evilginx2 Tool</h3>
+                <p>أداة متقدمة جداً لاختبار اختراق الحسابات عن طريق محاكاة هجمات التصيد وتخطي ميزة التحقق الثنائي (2FA) عبر اعتراض الكوكيز والـ Tokens.</p>
+                <button class="btn btn-alert" onclick="openModal('evilginx')">طريقة التحميل والتشغيل</button>
+            </div>
+            <div class="card">
+                <h3>DarkFly Tool</h3>
+                <p>أداة قوية جداً مجمعة ومخصصة لتثبيت واختيار ما يصل إلى 542 أداة اختراق وهندسة عكسية وتوعية أمنية مختلفة بنقرة واحدة.</p>
+                <button class="btn" onclick="openModal('darkfly')">طريقة التحميل والتشغيل</button>
+            </div>
+            <div class="card">
+                <h3>GhostTrack (OSINT)</h3>
+                <p>أداة استخباراتية شهيرة ومفتوحة المصدر لجمع معلومات دقيقة وتتبع المواقع وفحص البيانات الرقمية المتاحة علناً.</p>
+                <button class="btn" onclick="openModal('ghosttrack')">طريقة التحميل والتشغيل</button>
+            </div>
+            <div class="card">
+                <h3>PhoneInfoga (Python)</h3>
+                <p>أداة متطورة جداً لجمع المعلومات وفحص أرقام الهواتف وتحديد النطاق الجغرافي والبيانات المتاحة عنها مفتوحة المصدر.</p>
+                <button class="btn" onclick="openModal('phoneinfoga')">طريقة التحميل والتشغيل</button>
+            </div>
+            <div class="card">
+                <h3>Maltego API Tool (Python)</h3>
+                <p>سكريبتات ربط مخصصة بلغة بايثون لتحليل البيانات الضخمة ورسم الخرائط البيانية لجمع المعلومات الاستخباراتية.</p>
+                <button class="btn" onclick="openModal('maltego')">طريقة التحميل والتشغيل</button>
+            </div>
+            <div class="card">
+                <h3>Nmap Port Scanner (Python)</h3>
+                <p>أداة فحص منافذ الشبكة وسيرفرات الويب الشهيرة، مبرمجة ومدمجة بالكامل لتعمل داخل بيئة سكريبتات بايثون الذكية.</p>
+                <button class="btn" onclick="openModal('nmap')">طريقة التحميل والتشغيل</button>
+            </div>
+            <div class="card">
+                <h3>Scapy Packet Crafting (Python)</h3>
+                <p>مكتبة وأداة بايثون جبارة لفحص الحزم البرمجية داخل الشبكة، وتعديلها واختبار جدران الحماية ضد الثغرات.</p>
+                <button class="btn" onclick="openModal('scapy')">طريقة التحميل والتشغيل</button>
+            </div>
+            <div class="card" style="border-color: var(--neon-blue);">
+                <h3>Check Links Tool</h3>
+                <p>سكريبت بايثون ذكي مخصص لفحص الروابط المشبوهة وتحليلها للتأكد من سلامتها وخلوها من سكريبتات التتبع أو ملفات الضارة قبل فتحها.</p>
+                <button class="btn" onclick="openModal('checklinks')">طريقة التحميل والتشغيل</button>
+            </div>
+        </div>
+
+        <h2 class="section-title">البيئات والأنظمة والتوعية الأمنية</h2>
+        <div class="desktop-grid">
+            <div class="card">
+                <h3>تحميل تطبيق Termux الرسمي</h3>
+                <p>اضغط على الزر بالأسفل للانتقال مباشرة إلى المتصفح لتحميل التطبيق الرسمي الآمن من مستودعات فـ-درويد.</p>
+                <a href="https://f-droid.org/en/packages/com.termux/" target="_blank" class="btn">تحميل التطبيق الآن</a>
+            </div>
+            <div class="card">
+                <h3>أوامر التحديث الأساسية للنظام</h3>
+                <p>حزم التهيئة التي يجب كتابتها داخل تيرمكس لتثبيت المترجمات والمستودعات لمنع حدوث مشاكل تشغيل.</p>
+                <button class="btn" onclick="openModal('termux_cmds')">عرض الأوامر</button>
+            </div>
+            <div class="card high-alert">
+                <h3>أدوات كشف ثغرات الكاميرات (CCTV)</h3>
+                <p>شرح تعليمي حول كيفية فحص البورتات المفتوحة المصنعية وثغرات بروتوكول RTSP لتأمين الكاميرات وإغلاقها.</p>
+                <button class="btn btn-alert" onclick="openModal('cctv')">شرح الأداة والمسؤولية</button>
+            </div>
+            <div class="card">
+                <h3>مخاطر هجمات الهندسة الاجتماعية</h3>
+                <p>كيف يتعامل المخترقون بالروابط والصفحات المزورة لسرقة الحسابات، وكيف تحمي بياناتك من هذا التهديد الشائع.</p>
+                <button class="btn" onclick="openModal('social_engineering')">قراءة الشرح التوعوي</button>
+            </div>
+        </div>
+
+        <div class="contact-section-container">
+            <div class="contact-standalone-card">
+                <h3>قنوات تواصل المطور الرسمي (KOMANDO EL HAKEM)</h3>
+                <p>يمكنك متابعة الشروحات الحصرية أو فتح شات استفسارات مباشر عبر الأزرار المخصصة بالأسفل</p>
+                <div class="contact-row">
+                    <a href="https://www.tiktok.com/@komando_3mk?_r=1&_t=ZS-97d6FTW8zHM" target="_blank" class="contact-btn btn-tiktok">TikTok 🎬</a>
+                    <a href="https://t.me/komando99987" target="_blank" class="contact-btn btn-telegram">Telegram 🚀</a>
+                    <a href="https://wa.me/201xxxxxxxxx" target="_blank" class="contact-btn btn-whatsapp">WhatsApp 💬</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 🌐 هيكل اللوحة المنبثقة الذكية (Modal HTML Skeleton) 🌐 -->
+    <div class="modal-overlay" id="customModal">
+        <div class="modal-box">
+            <div class="modal-title" id="mTitle">اسم الأداة</div>
+            <div class="modal-desc" id="mDesc">وصف الأداة وطريقة الاستخدام بالعربي...</div>
+            <div class="modal-code" id="mCode">الأوامر البرمجية هنا...</div>
+            <div style="text-align: left;">
+                <button class="close-modal-btn" onclick="closeModal()">إغلاق اللوحة</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 🛠️ سكربت الجافا سكريبت لتحديث وعرض اللوحة المنبثقة 🛠️ -->
+    <script>
+        const toolsData = {
+            evilginx: {
+                title: "Evilginx2 Tool Guide",
+                desc: "أداة متقدمة للهندسة الاجتماعية واختبار اختراق الحسابات عبر اعتراض ملفات الكوكيز وجلسات العمل لتخطي التحقق الثنائي (2FA). يتم استخدامها في بيئة اختبار معزولة ومصرح بها.",
+                code: "git clone https://github.com/kgretzky/evilginx2\ncd evilginx2\nmake"
+            },
+            darkfly: {
+                title: "DarkFly Tool Guide",
+                desc: "أداة تجميعية شهيرة تسهل عملية تنزيل وإعداد حزم أدوات الحماية واختبار الثغرات المتعددة (حوالي 542 أداة) دفعة واحدة داخل نظام تيرمكس للاندرويد.",
+                code: "git clone https://github.com/Ranginang67/DarkFly-Tool\ncd DarkFly-Tool\npython2 install.py\ndarkfly"
+            },
+            ghosttrack: {
+                title: "GhostTrack (OSINT)",
+                desc: "سكريبت استخباراتي يعتمد على جمع البيانات من المصادر المفتوحة (OSINT) لتتبع المواقع الجغرافية التقريبية وتحليل البيانات الرقمية العامة بشكل تلقائي.",
+                code: "git clone https://github.com/HunMods/GhostTrack\ncd GhostTrack\npip install -r requirements.txt\npython ghosttrack.py"
+            },
+            phoneinfoga: {
+                title: "PhoneInfoga Scanner",
+                desc: "أداة متطورة مخصصة لجمع المعلومات العامة وفحص أرقام الهواتف دولياً لتحديد المشغل والنطاق الجغرافي والبيانات المتوفرة عنها على الإنترنت.",
+                code: "git clone https://github.com/sundowndev/phoneinfoga\ncd phoneinfoga\npython3 -m pip install -r requirements.txt\npython3 phoneinfoga.py --help"
+            },
+            maltego: {
+                title: "Maltego API Scripts",
+                desc: "مجموعة سكريبتات بايثون مخصصة لربط سحب البيانات التلقائي بواجهة برمجيات Maltego لرسم الخرائط البيانية وتحليل العلاقات بين الشبكات والأجهزة.",
+                code: "# يتطلب تفعيل مفتاح الواجهة البرمجية داخل ملف الإعدادات:\n# open config.json and insert your Maltego API Key"
+            },
+            nmap: {
+                title: "Python-Nmap Port Scanner",
+                desc: "مكتبة وسكريبت مدمج بلغة بايثون للقيام بعمليات فحص الشبكة الداخلية، كشف المنافذ (Ports) المفتوحة، وفحص جدران الحماية للتأكد من سلامتها.",
+                code: "pip install python-nmap\npython3 -c 'import nmap; nm = nmap.PortScanner(); print(\"Nmap Library Ready\")'"
+            },
+            scapy: {
+                title: "Scapy Packet Crafting",
+                desc: "مكتبة تفاعلية متقدمة جداً تمكنك بلغة بايثون من فحص، تعديل، وإرسال حزم البيانات (Packets) داخل الشبكة لاختبار كفاءة الأنظمة ضد الثغرات.",
+                code: "pip install scapy\nsudo scapy"
+            },
+            checklinks: {
+                title: "Check Links Tool Guide",
+                desc: "سكريبت بايثون ذكي مخصص لفحص الروابط والنطاقات المشبوهة وتحليل مساراتها للتأكد من خلوها من ملفات التجسس أو الصفحات المزورة قبل زيارتها.",
+                code: "git clone https://github.com/KOMANDO/check-links\ncd check-links\npip install -r requirements.txt\npython3 check_links.py"
+            },
+            termux_cmds: {
+                title: "Termux Essential Configuration",
+                desc: "الأوامر الأساسية لتهيئة وتحديث مستودعات نظام تيرمكس وتثبيت لغات البرمجة والمترجمات اللازمة لتشغيل كافة أدوات بايثون بدون أخطاء.",
+                code: "apt update && apt upgrade -y\npkg install git python python2 python3 -y\npkg install wget curl clang -y"
+            },
+            cctv: {
+                title: "CCTV Protocols Security",
+                desc: "شرح تعليمي يوضح الثغرات الأمنية في بروتوكول RTSP لكاميرات المراقبة المصنعية التي تترك بدون كلمات مرور قوية، وكيفية فحص البورتات المفتوحة لإغلاقها وتأمينها.",
+                code: "# فحص بورتات الكاميرات المفتوحة مصنعياً لتأمينها:\nnmap -p 554, 8554 [Target_IP]"
+            },
+            social_engineering: {
+                title: "Social Engineering Countermeasures",
+                desc: "دليل توعوي يشرح آليات الخداع عبر الإنترنت وكيفية التفريق بين الروابط الرسمية والمزورة لحماية حساباتك الشخصية وسيرفراتك من الاختراق والسرقة.",
+                code: "# نصيحة أمنية:\n# تحقق دائماً من الـ SSL Certificate ونطاق الرابط (Domain Name) قبل إدخال بياناتك."
+            }
+        };
+
+        function openModal(toolKey) {
+            const data = toolsData[toolKey];
+            if (data) {
+                document.getElementById('mTitle').innerText = data.title;
+                document.getElementById('mDesc').innerText = data.desc;
+                document.getElementById('mCode').innerText = data.code;
+                document.getElementById('customModal').classList.add('active');
+            }
+        }
+
+        function closeModal() {
+            document.getElementById('customModal').classList.remove('active');
+        }
+
+        // إغلاق اللوحة عند الضغط خارج الصندوق الأسود
+        document.getElementById('customModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+</html>
+          echo test, and deploy your project.
